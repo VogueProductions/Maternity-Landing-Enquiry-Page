@@ -462,7 +462,7 @@ function collectLead() {
 function saveToSheet(status) {
   collectLead();
   if(!S.name && !S.phone && !S.address) return Promise.resolve(false);
-  if(!SCRIPT_URL) { console.log('SCRIPT_URL missing', S); return Promise.resolve(false); }
+  if(!SCRIPT_URL) { console.log(var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxteIIelPZ67s2bNK1FXmV0xI10NJWkFoJqKsgVovMQyhNGbgOQuTTUSrn96Fo4hBUK/exec',); return Promise.resolve(false); }
 
   var url = SCRIPT_URL
     + '?name=' + encodeURIComponent(S.name)

@@ -2,66 +2,65 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Maternity Shoot</title>
+  <title>Maternity Funnel</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- HERO -->
-<section class="hero">
-  <h1>🤰 Capture Your Pregnancy Glow Forever</h1>
-  <p>Premium Maternity Photoshoots in Agra 💕</p>
-  <p>🎁 FREE Reel Worth ₹1999 | ⭐ 4.9 Rating</p>
-  <button onclick="scrollToForm()">Get Your Shoot Plan</button>
-</section>
+<section class="container">
 
-<!-- PROOF -->
-<section class="proof">
-  <h2>Real Moms 💖</h2>
-  <div class="gallery">
-    <img src="images/1.jpg">
-    <img src="images/2.jpg">
-    <img src="images/3.jpg">
+  <h1>Find Your <span>Perfect</span> Package</h1>
+  <p class="subtitle">Answer a few questions & get your ideal shoot plan 💕</p>
+
+  <!-- STEP 1 -->
+  <div class="step active" id="step-1">
+    <h2>What’s your name?</h2>
+    <input type="text" id="name" placeholder="Enter your name">
+    <button onclick="handleStep1()">Next →</button>
   </div>
-</section>
 
-<!-- FORM -->
-<section id="form">
-  <h2>Get Your Personalized Plan</h2>
+  <!-- STEP 2 -->
+  <div class="step" id="step-2">
+    <h2>Select your shoot type</h2>
+    <select id="shootType">
+      <option value="">Select</option>
+      <option value="basic">Budget</option>
+      <option value="premium">Premium</option>
+      <option value="luxury">Luxury</option>
+    </select>
+    <button onclick="handleStep2()">Next →</button>
+  </div>
 
-  <input id="iName" placeholder="Your Name">
-  
-  <select id="shootType">
-    <option value="">Shoot Type</option>
-    <option value="basic">Budget</option>
-    <option value="premium">Premium</option>
-    <option value="luxury">Luxury</option>
-  </select>
+  <!-- STEP 3 -->
+  <div class="step" id="step-3">
+    <h2>Your budget?</h2>
+    <select id="budget">
+      <option value="">Select</option>
+      <option value="low">Under ₹8K</option>
+      <option value="mid">₹8K–₹15K</option>
+      <option value="high">₹15K+</option>
+    </select>
+    <button onclick="handleStep3()">Next →</button>
+  </div>
 
-  <select id="budget">
-    <option value="">Budget</option>
-    <option value="low">Under 8K</option>
-    <option value="mid">8K–15K</option>
-    <option value="high">15K+</option>
-  </select>
+  <!-- STEP 4 -->
+  <div class="step" id="step-4">
+    <h2>What matters most?</h2>
+    <select id="priority">
+      <option value="">Select</option>
+      <option value="price">Affordable</option>
+      <option value="quality">Quality</option>
+      <option value="experience">Experience</option>
+    </select>
+    <button onclick="showRecommendation()">See My Package</button>
+  </div>
 
-  <select id="priority">
-    <option value="">Priority</option>
-    <option value="price">Affordable</option>
-    <option value="quality">Quality</option>
-    <option value="experience">Experience</option>
-  </select>
+  <!-- RESULT -->
+  <div class="step" id="step-5">
+    <div id="result"></div>
+  </div>
 
-  <button onclick="showRecommendation()">See My Package</button>
-
-  <div id="result"></div>
-</section>
-
-<!-- CTA -->
-<section class="cta">
-  <h2>Limited Slots ⚡</h2>
-  <button onclick="directWhatsApp()">Chat on WhatsApp</button>
 </section>
 
 <script src="script.js"></script>

@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agra Maternity Photography | Vogue Productions</title>
+  <meta name="description" content="Premium maternity photography in Agra by Vogue Productions. Book elegant indoor, outdoor & studio maternity shoots in Agra." />
+  <meta name="theme-color" content="#ff2d7e" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --black:#050506;
+      --dark:#0d0d10;
+      --card:#141418;
+      --pink:#ff2d7e;
+      --pink2:#ff6ba8;
+      --gold:#d4a843;
+      --white:#ffffff;
+      --muted:#a6a6ad;
+      --soft:rgba(255,255,255,.08);
+      --border:rgba(255,45,126,.25);
+      --green:#25d366;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;scroll-behavior:smooth}
+    body{font-family:Montserrat,Arial,sans-serif;background:var(--black);color:var(--white);overflow-x:hidden}
+    a{text-decoration:none;color:inherit}
+    img,video{max-width:100%;display:block}
+    .container{width:min(1180px,92%);margin:auto}
+    .pink{color:var(--pink)}
+    .gold{color:var(--gold)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:999px;padding:15px 26px;font-size:12px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;border:1px solid transparent;cursor:pointer;transition:.25s ease;font-family:Montserrat,sans-serif}
+    .btn-primary{background:var(--pink);color:#fff;box-shadow:0 14px 40px rgba(255,45,126,.28)}
+    .btn-primary:hover{background:var(--pink2);transform:translateY(-2px)}
+    .btn-outline{border-color:rgba(255,255,255,.24);color:#fff;background:rgba(255,255,255,.04)}
+    .btn-outline:hover{border-color:var(--pink);color:var(--pink);transform:translateY(-2px)}
+
+    /* NAV */
+    .nav{position:fixed;inset:0 0 auto 0;z-index:50;background:rgba(5,5,6,.84);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,45,126,.14)}
+    .nav-in{height:68px;display:flex;align-items:center;justify-content:space-between}
+    .logo{font-family:"Playfair Display",serif;font-weight:900;font-size:22px;letter-spacing:1.8px;color:var(--pink)}
+    .logo span{color:#fff}
+    .nav-links{display:flex;align-items:center;gap:22px;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,.72)}
+    .nav-links a:hover{color:var(--pink)}
+    @media(max-width:760px){.nav-links a:not(.nav-btn){display:none}.nav-in{height:62px}.logo{font-size:18px}}
+
+    /* HERO */
+    .hero{min-height:100vh;position:relative;display:grid;place-items:center;padding:120px 0 70px;overflow:hidden}
+    .hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.28}
+    .hero::before{content:"";position:absolute;inset:0;background:
+      radial-gradient(circle at 72% 25%,rgba(255,45,126,.22),transparent 32%),
+      radial-gradient(circle at 22% 65%,rgba(212,168,67,.12),transparent 34%),
+      linear-gradient(90deg,rgba(5,5,6,.96),rgba(5,5,6,.72),rgba(5,5,6,.94));z-index:1}
+    .hero-content{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+    .eyebrow{display:inline-flex;width:max-content;padding:7px 16px;border-radius:999px;border:1px solid var(--border);background:rgba(255,45,126,.08);color:var(--pink);font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;margin-bottom:24px}
+    h1{font-family:"Playfair Display",serif;font-size:clamp(44px,7vw,88px);line-height:.92;font-weight:900;margin-bottom:20px}
+    .hero p{font-family:"Cormorant Garamond",serif;font-size:23px;line-height:1.55;color:rgba(255,255,255,.72);max-width:620px;margin-bottom:30px}
+    .hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+    .hero-card{background:linear-gradient(145deg,rgba(255,255,255,.08),rgba(255,255,255,.025));border:1px solid rgba(255,255,255,.12);border-radius:30px;padding:18px;box-shadow:0 30px 90px rgba(0,0,0,.45)}
+    .hero-frame{border-radius:24px;overflow:hidden;position:relative;aspect-ratio:4/5;background:linear-gradient(135deg,rgba(255,45,126,.2),rgba(212,168,67,.12))}
+    .hero-frame .poster{height:100%;display:grid;place-items:center;text-align:center;padding:38px;background:
+      linear-gradient(rgba(0,0,0,.25),rgba(0,0,0,.55)),
+      radial-gradient(circle at 50% 30%,rgba(255,45,126,.32),transparent 36%)}
+    .poster h3{font-family:"Playfair Display",serif;font-size:34px;margin-bottom:12px}
+    .poster small{color:rgba(255,255,255,.7);line-height:1.6}
+    .mini-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}
+    .stat{background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:14px 10px;text-align:center}
+    .stat b{display:block;color:var(--pink);font-size:18px}
+    .stat span{font-size:10px;text-transform:uppercase;letter-spacing:1px;color:var(--muted)}
+    @media(max-width:920px){.hero-content{grid-template-columns:1fr}.hero-card{max-width:520px}.hero p{font-size:20px}}
+
+    /* SECTIONS */
+    section{padding:86px 0}
+    .section-head{text-align:center;margin-bottom:42px}
+    .section-head .eyebrow{margin-inline:auto;margin-bottom:15px}
+    h2{font-family:"Playfair Display",serif;font-size:clamp(34px,5vw,58px);line-height:1.03}
+    .sub{font-family:"Cormorant Garamond",serif;color:var(--muted);font-size:20px;line-height:1.6;max-width:690px;margin:14px auto 0}
+
+    /* VIDEO SHOWCASE */
+    .video-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}
+    .video-box{background:var(--card);border:1px solid rgba(255,255,255,.09);border-radius:24px;overflow:hidden;position:relative;min-height:260px}
+    .video-box video{width:100%;height:100%;object-fit:cover;min-height:260px;background:#111}
+    .video-note{padding:28px;background:linear-gradient(145deg,rgba(255,45,126,.12),rgba(255,255,255,.035))}
+    .video-note h3{font-family:"Playfair Display",serif;font-size:30px;margin-bottom:12px}
+    .video-note p{color:var(--muted);font-size:14px;line-height:1.8}
+    @media(max-width:850px){.video-grid{grid-template-columns:1fr}}
+
+    /* PACKAGES */
+    .packages{background:var(--dark)}
+    .pkg-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .pkg{background:linear-gradient(160deg,rgba(255,255,255,.07),rgba(255,255,255,.025));border:1px solid rgba(255,255,255,.09);border-radius:26px;padding:26px;position:relative;cursor:pointer;transition:.25s ease}
+    .pkg:hover,.pkg.selected{transform:translateY(-5px);border-color:var(--pink);box-shadow:0 22px 60px rgba(255,45,126,.14)}
+    .pkg.rec::before{content:"MOST SELECTED";position:absolute;top:-11px;left:22px;background:var(--pink);color:#fff;border-radius:999px;padding:5px 12px;font-size:10px;font-weight:900;letter-spacing:1.5px}
+    .pkg small{color:var(--gold);font-weight:900;letter-spacing:2px;text-transform:uppercase}
+    .pkg h3{font-family:"Playfair Display",serif;font-size:25px;margin:9px 0}
+    .price{font-size:30px;font-weight:900;color:var(--pink);margin-bottom:8px}
+    .pkg ul{list-style:none;margin:18px 0 22px;display:grid;gap:10px}
+    .pkg li{color:rgba(255,255,255,.72);font-size:13px;line-height:1.45;display:flex;gap:9px}
+    .pkg li::before{content:"✦";color:var(--pink)}
+    @media(max-width:900px){.pkg-grid{grid-template-columns:1fr}}
+
+    /* FORM */
+    .form-wrap{background:radial-gradient(circle at 50% 0,rgba(255,45,126,.16),transparent 38%),var(--black)}
+    .lead-card{width:min(720px,100%);margin:auto;background:linear-gradient(160deg,rgba(255,255,255,.07),rgba(255,255,255,.025));border:1px solid var(--border);border-radius:30px;padding:34px;box-shadow:0 30px 90px rgba(0,0,0,.36)}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+    .field{margin-bottom:16px}
+    label{display:block;color:var(--pink);font-size:11px;font-weight:900;letter-spacing:1.7px;text-transform:uppercase;margin-bottom:8px}
+    input,select,textarea{width:100%;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.05);color:#fff;border-radius:14px;padding:15px 16px;font:500 15px Montserrat,sans-serif;outline:none}
+    textarea{min-height:100px;resize:vertical}
+    input:focus,select:focus,textarea:focus{border-color:var(--pink);box-shadow:0 0 0 4px rgba(255,45,126,.11)}
+    option{background:#151515}
+    .consent{font-size:12px;line-height:1.65;color:var(--muted);margin:6px 0 18px}
+    .status{display:none;margin-top:12px;padding:12px 14px;border-radius:14px;font-size:13px;line-height:1.5}
+    .status.ok{display:block;background:rgba(37,211,102,.09);border:1px solid rgba(37,211,102,.35);color:#a7ffc8}
+    .status.err{display:block;background:rgba(255,45,126,.09);border:1px solid rgba(255,45,126,.35);color:#ff9dc0}
+    @media(max-width:700px){.lead-card{padding:24px 18px}.form-row{grid-template-columns:1fr}}
+
+    /* CONTACT */
+    .contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .contact-card{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:20px;padding:22px;text-align:center}
+    .contact-card b{display:block;color:var(--pink);font-size:11px;letter-spacing:1.7px;text-transform:uppercase;margin-bottom:8px}
+    .contact-card span{font-size:14px;color:rgba(255,255,255,.8)}
+    @media(max-width:760px){.contact-grid{grid-template-columns:1fr}}
+
+    footer{padding:34px 0;border-top:1px solid rgba(255,45,126,.13);text-align:center;color:var(--muted);font-size:12px}
+    .wa-float{position:fixed;right:20px;bottom:20px;z-index:60;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:var(--green);box-shadow:0 12px 36px rgba(37,211,102,.42);font-size:26px}
+  </style>
+</head>
+
+<body>
+  <nav class="nav">
+    <div class="container nav-in">
+      <a class="logo" href="#">VOGUE<span> PRODUCTIONS</span></a>
+      <div class="nav-links">
+        <a href="#videos">Videos</a>
+        <a href="#packages">Packages</a>
+        <a href="#enquiry" class="btn btn-primary nav-btn">Book Slot</a>
+      </div>
+    </div>
+  </nav>
+
+  <a class="wa-float" href="https://wa.me/918433220257" target="_blank" aria-label="Chat on WhatsApp">💬</a>
+
+  <header class="hero">
+    <!-- Optional: add your own video at videos/hero-video.mp4. If missing, browser will simply skip it. -->
+    <video class="hero-video" autoplay muted loop playsinline poster="">
+      <source src="videos/hero-video.mp4" type="video/mp4">
+    </video>
+
+    <div class="container hero-content">
+      <div>
+        <div class="eyebrow">Agra Maternity Photography Studio</div>
+        <h1>Celebrate Your <span class="pink">Motherhood</span> Journey</h1>
+        <p>Premium maternity photoshoots in Agra with elegant styling, calm poses, studio comfort and timeless memories by Vogue Productions.</p>
+        <div class="hero-actions">
+          <a href="#enquiry" class="btn btn-primary">Get Package Details</a>
+          <a href="#videos" class="btn btn-outline">View Video Showcase</a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="hero-frame">
+          <div class="poster">
+            <div>
+              <h3>Elegant. Soft. Premium.</h3>
+              <small>Indoor, outdoor & creative maternity shoots specially planned for expecting mothers in Agra</small>
+            </div>
+          </div>
+        </div>
+        <div class="mini-stats">
+          <div class="stat"><b>Agra</b><span>Focused</span></div>
+          <div class="stat"><b>Studio</b><span>Setup</span></div>
+          <div class="stat"><b>WhatsApp</b><span>Booking</span></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section id="videos">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Video Showcase</div>
+        <h2>See the <span class="pink">Shoot Experience</span></h2>
+        <p class="sub">Add short reels, behind-the-scenes clips or client moments here to build trust before the enquiry form.</p>
+      </div>
+
+      <div class="video-grid">
+        <div class="video-box">
+          <video controls muted playsinline poster="">
+            <source src="videos/showcase-1.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="video-note">
+          <h3>Premium maternity memories in Agra</h3>
+          <p>Use compressed MP4 videos here. Recommended: 8–20 seconds, under 20 MB each, 720p or 1080p compressed. For GitHub Pages, YouTube/Cloudinary embeds are better for heavy videos.</p>
+          <br>
+          <a href="#enquiry" class="btn btn-primary">Enquire Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="packages" id="packages">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Maternity Packages</div>
+        <h2>Choose Your <span class="pink">Agra Shoot Package</span></h2>
+        <p class="sub">Click any package and then fill the form. Your enquiry will open directly on WhatsApp with all details.</p>
+      </div>
+
+      <div class="pkg-grid">
+        <div class="pkg" data-package="Essential Maternity Shoot">
+          <small>Essential</small>
+          <h3>Maternity Mini</h3>
+          <div class="price">₹____</div>
+          <ul>
+            <li>Short maternity photo session</li>
+            <li>Basic styling guidance</li>
+            <li>Studio / selected Agra location</li>
+            <li>Edited photos included</li>
+          </ul>
+          <button class="btn btn-outline" type="button">Select Package</button>
+        </div>
+
+        <div class="pkg rec" data-package="Premium Maternity Shoot">
+          <small>Premium</small>
+          <h3>Signature Maternity</h3>
+          <div class="price">₹____</div>
+          <ul>
+            <li>Most preferred maternity package</li>
+            <li>Multiple poses & premium styling</li>
+            <li>Indoor / outdoor Agra shoot options</li>
+            <li>Edited photos + premium feel</li>
+          </ul>
+          <button class="btn btn-primary" type="button">Select Package</button>
+        </div>
+
+        <div class="pkg" data-package="Luxury Maternity Shoot">
+          <small>Luxury</small>
+          <h3>Royal Motherhood</h3>
+          <div class="price">₹____</div>
+          <ul>
+            <li>Premium concept-based photoshoot</li>
+            <li>Creative lighting & elegant frames</li>
+            <li>Family/couple maternity moments</li>
+            <li>Best for keepsake memories</li>
+          </ul>
+          <button class="btn btn-outline" type="button">Select Package</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="form-wrap" id="enquiry">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Book Your Slot</div>
+        <h2>Get Maternity Shoot Details on <span class="pink">WhatsApp</span></h2>
+        <p class="sub">Even if a client exits after filling details, the partial lead can be saved to your Google Sheet after setup.</p>
+      </div>
+
+      <form class="lead-card" id="leadForm">
+        <div class="form-row">
+          <div class="field">
+            <label for="name">Mother's Name</label>
+            <input id="name" name="name" type="text" placeholder="Enter your name" autocomplete="name" required>
+          </div>
+
+          <div class="field">
+            <label for="phone">WhatsApp Number</label>
+            <input id="phone" name="phone" type="tel" placeholder="Enter WhatsApp number" autocomplete="tel" required>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="location">Your Location in Agra</label>
+          <input id="location" name="location" type="text" placeholder="Example: Sikandra, Kamla Nagar, Tajganj, Dayal Bagh" required>
+        </div>
+
+        <div class="form-row">
+          <div class="field">
+            <label for="package">Interested Package</label>
+            <select id="package" name="package" required>
+              <option value="">Select package</option>
+              <option>Essential Maternity Shoot</option>
+              <option>Premium Maternity Shoot</option>
+              <option>Luxury Maternity Shoot</option>
+              <option>Need Guidance</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="month">Expected Shoot Month</label>
+            <select id="month" name="month">
+              <option value="">Select month</option>
+              <option>January</option><option>February</option><option>March</option><option>April</option>
+              <option>May</option><option>June</option><option>July</option><option>August</option>
+              <option>September</option><option>October</option><option>November</option><option>December</option>
+              <option>Not sure yet</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="message">Any Special Requirement</label>
+          <textarea id="message" name="message" placeholder="Tell us if you want studio shoot, outdoor shoot, couple shoot, family shoot, etc."></textarea>
+        </div>
+
+        <p class="consent">By submitting your details, you agree to be contacted by Vogue Productions regarding Agra maternity photography packages.</p>
+
+        <button class="btn btn-primary" type="submit">Send Enquiry on WhatsApp</button>
+        <div class="status" id="statusBox"></div>
+      </form>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Contact</div>
+        <h2>Vogue Productions, <span class="pink">Agra</span></h2>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-card"><b>WhatsApp</b><span>+91 84332 20257</span></div>
+        <div class="contact-card"><b>Location</b><span>Agra, Uttar Pradesh</span></div>
+        <div class="contact-card"><b>Service</b><span>Maternity Photography</span></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">© Vogue Productions | Agra Maternity Photography</div>
+  </footer>
+
+  <script>
+    // ==========================
+    // IMPORTANT SETUP
+    // ==========================
+    // Paste your Google Apps Script Web App URL below after deployment.
+    // Example: const GOOGLE_SCRIPT_URL = https://script.google.com/macros/s/AKfycbzetWOzZ3_6Zk2wIUuNLPxjrA_mesVj8xw68q-98DnaVCPJNStpKuJYwNUO75ObIUQgVA/exec
+    const GOOGLE_SCRIPT_URL = "";
+
+    const BUSINESS_WHATSAPP = "918433220257";
+    const form = document.getElementById("leadForm");
+    const statusBox = document.getElementById("statusBox");
+    const packageSelect = document.getElementById("package");
+    let leadStatus = "Incomplete";
+    let autoSaveTimer = null;
+
+    function getLeadData(statusValue) {
+      return {
+        name: document.getElementById("name").value.trim(),
+        phone: document.getElementById("phone").value.trim(),
+        location: document.getElementById("location").value.trim(),
+        package: document.getElementById("package").value.trim(),
+        month: document.getElementById("month").value.trim(),
+        message: document.getElementById("message").value.trim(),
+        status: statusValue || leadStatus,
+        page: window.location.href,
+        timestamp: new Date().toISOString()
+      };
+    }
+
+    async function saveLead(statusValue) {
+      const data = getLeadData(statusValue);
+
+      // Avoid saving fully blank leads.
+      if (!data.name && !data.phone && !data.location && !data.package) return;
+
+      if (!GOOGLE_SCRIPT_URL) {
+        console.log("Google Apps Script URL missing. Lead not saved yet.", data);
+        return;
+      }
+
+      try {
+        await fetch(GOOGLE_SCRIPT_URL, {
+          method: "POST",
+          mode: "no-cors",
+          headers: { "Content-Type": "text/plain;charset=utf-8" },
+          body: JSON.stringify(data)
+        });
+      } catch (error) {
+        console.warn("Lead save failed:", error);
+      }
+    }
+
+    function scheduleAutoSave() {
+      clearTimeout(autoSaveTimer);
+      autoSaveTimer = setTimeout(() => saveLead("Incomplete"), 900);
+    }
+
+    form.addEventListener("input", scheduleAutoSave);
+    form.addEventListener("change", scheduleAutoSave);
+
+    document.querySelectorAll(".pkg").forEach(card => {
+      card.addEventListener("click", () => {
+        document.querySelectorAll(".pkg").forEach(c => c.classList.remove("selected"));
+        card.classList.add("selected");
+        packageSelect.value = card.dataset.package || "";
+        document.getElementById("enquiry").scrollIntoView({ behavior: "smooth" });
+        scheduleAutoSave();
+      });
+    });
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const data = getLeadData("WhatsApp Clicked");
+
+      if (!data.name || !data.phone || !data.location || !data.package) {
+        statusBox.className = "status err";
+        statusBox.textContent = "Please fill Name, WhatsApp Number, Your Location in Agra and Package.";
+        return;
+      }
+
+      statusBox.className = "status ok";
+      statusBox.textContent = "Opening WhatsApp with your enquiry details...";
+
+      await saveLead("WhatsApp Clicked");
+
+      const text =
+`Hello Vogue Productions,
+I want to enquire about Agra Maternity Photography.
+
+Name: ${data.name}
+WhatsApp Number: ${data.phone}
+Your Location in Agra: ${data.location}
+Interested Package: ${data.package}
+Expected Shoot Month: ${data.month || "Not mentioned"}
+Special Requirement: ${data.message || "Not mentioned"}
+
+Please share package details and available slots.`;
+
+      const waUrl = `https://wa.me/${BUSINESS_WHATSAPP}?text=${encodeURIComponent(text)}`;
+      window.open(waUrl, "_blank");
+    });
+
+    // Last attempt to save when user exits. Works best after they type something.
+    window.addEventListener("beforeunload", () => {
+      const data = getLeadData("Incomplete");
+      if (!data.name && !data.phone && !data.location && !data.package) return;
+
+      if (GOOGLE_SCRIPT_URL && navigator.sendBeacon) {
+        const blob = new Blob([JSON.stringify(data)], { type: "text/plain;charset=utf-8" });
+        navigator.sendBeacon(GOOGLE_SCRIPT_URL, blob);
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+.hero {
+  text-align: center;
+  padding: 50px;
+  background: #fff0f3;
+}
+
+button {
+  background: #ff4d6d;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+}
+
+.gallery {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+}
+
+input, select {
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  width: 80%;
+}
+
+#result {
+  margin-top: 20px;
+  text-align: center;
+}

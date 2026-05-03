@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Maternity Shoot</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>🤰 Capture Your Pregnancy Glow Forever</h1>
+  <p>Premium Maternity Photoshoots in Agra 💕</p>
+  <p>🎁 FREE Reel Worth ₹1999 | ⭐ 4.9 Rating</p>
+  <button onclick="scrollToForm()">Get Your Shoot Plan</button>
+</section>
+
+<!-- PROOF -->
+<section class="proof">
+  <h2>Real Moms 💖</h2>
+  <div class="gallery">
+    <img src="images/1.jpg">
+    <img src="images/2.jpg">
+    <img src="images/3.jpg">
+  </div>
+</section>
+
+<!-- FORM -->
+<section id="form">
+  <h2>Get Your Personalized Plan</h2>
+
+  <input id="iName" placeholder="Your Name">
+  
+  <select id="shootType">
+    <option value="">Shoot Type</option>
+    <option value="basic">Budget</option>
+    <option value="premium">Premium</option>
+    <option value="luxury">Luxury</option>
+  </select>
+
+  <select id="budget">
+    <option value="">Budget</option>
+    <option value="low">Under 8K</option>
+    <option value="mid">8K–15K</option>
+    <option value="high">15K+</option>
+  </select>
+
+  <select id="priority">
+    <option value="">Priority</option>
+    <option value="price">Affordable</option>
+    <option value="quality">Quality</option>
+    <option value="experience">Experience</option>
+  </select>
+
+  <button onclick="showRecommendation()">See My Package</button>
+
+  <div id="result"></div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <h2>Limited Slots ⚡</h2>
+  <button onclick="directWhatsApp()">Chat on WhatsApp</button>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
